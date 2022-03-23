@@ -53,9 +53,9 @@ public class Loggin extends javax.swing.JFrame {
         jTextField4 = new javax.swing.JTextField();
         jTextField6 = new javax.swing.JTextField();
         jTextField7 = new javax.swing.JTextField();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jComboBox2 = new javax.swing.JComboBox<>();
-        jComboBox3 = new javax.swing.JComboBox<>();
+        cbxDia = new javax.swing.JComboBox<>();
+        cbxMes = new javax.swing.JComboBox<>();
+        cbxDominio = new javax.swing.JComboBox<>();
         jRadioButton1 = new javax.swing.JRadioButton();
         jRadioButton2 = new javax.swing.JRadioButton();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -67,7 +67,7 @@ public class Loggin extends javax.swing.JFrame {
         jCheckBox5 = new javax.swing.JCheckBox();
         jCheckBox6 = new javax.swing.JCheckBox();
         jLabel11 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
+        txtAnio = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -128,16 +128,16 @@ public class Loggin extends javax.swing.JFrame {
 
         jTextField6.setText("NOMBRE");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" }));
-        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+        cbxDia.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" }));
+        cbxDia.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox1ActionPerformed(evt);
+                cbxDiaActionPerformed(evt);
             }
         });
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ENERO", "FEBRERO", "MARZO", "ABRIL", "MAYO", "JUNIO", "AGOSTO", "SEPTIEMBRE", "OCTUBRE", "NOVIEMBRE", "DICIEMNRE" }));
+        cbxMes.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ENERO", "FEBRERO", "MARZO", "ABRIL", "MAYO", "JUNIO", "AGOSTO", "SEPTIEMBRE", "OCTUBRE", "NOVIEMBRE", "DICIEMNRE" }));
 
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Hotmail.com", "Gmail.com" }));
+        cbxDominio.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Hotmail.com", "Gmail.com" }));
 
         jRadioButton1.setText("MASCULINO");
 
@@ -161,10 +161,10 @@ public class Loggin extends javax.swing.JFrame {
 
         jLabel11.setText("@");
 
-        jTextField3.setText("AÑO");
-        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+        txtAnio.setText("AÑO");
+        txtAnio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField3ActionPerformed(evt);
+                txtAnioActionPerformed(evt);
             }
         });
 
@@ -200,7 +200,7 @@ public class Loggin extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jLabel11)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(cbxDominio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jButton1)
                         .addGap(26, 26, 26)
@@ -220,11 +220,11 @@ public class Loggin extends javax.swing.JFrame {
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                                 .addComponent(jLabel4)
                                 .addGap(18, 18, 18)
-                                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(cbxDia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(cbxMes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(26, 26, 26)
-                                .addComponent(jTextField3))
+                                .addComponent(txtAnio))
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addGroup(layout.createSequentialGroup()
                                     .addComponent(jLabel6)
@@ -279,9 +279,9 @@ public class Loggin extends javax.swing.JFrame {
                 .addGap(23, 23, 23)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cbxDia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cbxMes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtAnio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(11, 11, 11)
                 .addComponent(jLabel9)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -295,7 +295,7 @@ public class Loggin extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel5)
                             .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(cbxDominio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel11))
                         .addGap(21, 21, 21)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -328,28 +328,28 @@ public class Loggin extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
  public void Practico4(){
-        RestrictedTextField restric = new RestrictedTextField(jTextField3);    
+        RestrictedTextField restric = new RestrictedTextField(txtAnio);    
         this.setTitle("FORMULARIO 1");
         restric.setLimit(4);
         restric.isOnlyNums();
     }
  
  
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+    private void txtAnioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAnioActionPerformed
         Practico4();
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3ActionPerformed
+    }//GEN-LAST:event_txtAnioActionPerformed
 public void Practico3(){
     initComponents();
     for (int i = 1; i < 32; i++) {
-        jComboBox1.addItem(String.valueOf(i));
+        cbxDia.addItem(String.valueOf(i));
         
     }
 }
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+    private void cbxDiaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbxDiaActionPerformed
         
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox1ActionPerformed
+    }//GEN-LAST:event_cbxDiaActionPerformed
 
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
@@ -366,10 +366,10 @@ public void Practico3(){
             String fecha1;
             int error=0;
             
-            if (jTextField1.getText().length()==0|| jTextField2.getText().length()==0|| jTextField3.getText().length()==0|| jTextField4.getText().length()==0|| jTextField6.getText().length()==0|| jTextField7.getText().length()==0) {
+            if (jTextField1.getText().length()==0|| jTextField2.getText().length()==0|| txtAnio.getText().length()==0|| jTextField4.getText().length()==0|| jTextField6.getText().length()==0|| jTextField7.getText().length()==0) {
                 
             } else {
-                fecha1=jTextField3.getText();
+                fecha1=txtAnio.getText();
                 fecha=Integer.parseInt(fecha1);
                 
                 if(fecha<1990||fecha>2017){
@@ -402,7 +402,7 @@ public void Practico3(){
                     }
                     case(2):{
                         JOptionPane.showMessageDialog(null,"INDIQUE FECHA DE NACIMIENTO VALIDA");
-                        jTextField3.setText("");
+                        txtAnio.setText("");
                         break;
                         
                     }
@@ -434,7 +434,7 @@ public void Practico3(){
         if(evt.getSource()==jButton2){
             jTextField1.setText("");
             jTextField2.setText("");
-            jTextField3.setText("");
+            txtAnio.setText("");
             jTextField4.setText("");
             jTextField6.setText("");
             jTextField7.setText("");
@@ -455,7 +455,7 @@ public void Practico3(){
         if (evt.getSource()==jButton3) {
             String sexo = null;
             
-            jTextArea1.append("NOMBRE: "+jTextField1.getText()+" "+"APELLIDOS: "+jTextField2.getText()+"FECHA DE NACIMIENTO: "+(String)CbxEco.getSelectedItem().toString()+"/"+(String)jCheckBox4.getSelectedItem().toString()+"/"+jTextField3.getText()+""+"SEXO: "+sexo+" EMAIL: "+jTextField4.getText().concat("@").concat((String)jCheckBox3.getSelectedItem())+"\n");
+            jTextArea1.append("NOMBRE: "+jTextField1.getText()+" "+"APELLIDOS: "+jTextField2.getText()+"FECHA DE NACIMIENTO: "+cbxDia.getSelectedItem().toString()+"/"+cbxMes.getSelectedItem().toString()+"/"+txtAnio.getText()+""+"SEXO: "+sexo+" EMAIL: "+jTextField4.getText().concat("@").concat(cbxDominio.getSelectedItem().toString())+"\n");
             
         }
         // TODO add your handling code here:
@@ -463,20 +463,20 @@ public void Practico3(){
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         if (evt.getSource()==jButton4) {
-            if (jTextField1.getText().length()==0 || jTextField2.getText().length()==0|| jTextField3.getText().length()==0 || jTextField4.getText().length()==0 || jTextField6.getText().length()==0|| jTextField7.getText().length()==0 || (jRadioButton1.isSelected()==false&& jRadioButton2.isSelected()==false)) {
+            if (jTextField1.getText().length()==0 || jTextField2.getText().length()==0|| txtAnio.getText().length()==0 || jTextField4.getText().length()==0 || jTextField6.getText().length()==0|| jTextField7.getText().length()==0 || (jRadioButton1.isSelected()==false&& jRadioButton2.isSelected()==false)) {
                 JOptionPane.showInputDialog(null,"DEBE INGRESAR SUS DATOS");
                 
             } else {
                 try{
-                    BufferedWriter bw= BufferedWriter(new FileWriter("c:/ARCHIVO/PRUEBA.TXT",true)); 
+                    BufferedWriter bw= BufferedWriter(new FileWriter("D://ARCHIVO//PRUEBA.TXT",true)); 
                     
                     String nombre = jTextField1.getText();
                     String apellido = jTextField2.getText();
-                    String mes = (String)CbxEco.getSelectedItem().toString();
-                    String dia = (String)jCheckBox1.getSelectedItem();
+                    String mes = cbxMes.getSelectedItem().toString();
+                    String dia = cbxDia.getSelectedItem().toString();
                     String email = jTextField4.getText();
                     String contraseña = jTextField7.getText();
-                    String año = jTextField3.getText();
+                    String año = txtAnio.getText();
                     String P1 = (String)jCheckBox1.getText();
                     String P2 = (String)CbxEco.getText();
                     String P3 = (String)jCheckBox3.getText();
@@ -495,7 +495,7 @@ public void Practico3(){
                     bw.newLine();
             jTextField1.setText("");
             jTextField2.setText("");
-            jTextField3.setText("");
+            txtAnio.setText("");
             jTextField4.setText("");
             jTextField6.setText("");
             jTextField7.setText("");
@@ -555,6 +555,9 @@ public void Practico3(){
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JCheckBox CbxEco;
+    private javax.swing.JComboBox<String> cbxDia;
+    private javax.swing.JComboBox<String> cbxDominio;
+    private javax.swing.JComboBox<String> cbxMes;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
@@ -565,9 +568,6 @@ public void Practico3(){
     private javax.swing.JCheckBox jCheckBox4;
     private javax.swing.JCheckBox jCheckBox5;
     private javax.swing.JCheckBox jCheckBox6;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox2;
-    private javax.swing.JComboBox<String> jComboBox3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -585,10 +585,10 @@ public void Practico3(){
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField6;
     private javax.swing.JTextField jTextField7;
+    private javax.swing.JTextField txtAnio;
     // End of variables declaration//GEN-END:variables
 
     private BufferedWriter BufferedWriter(FileWriter fileWriter) {
